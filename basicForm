@@ -1,0 +1,33 @@
+import React from 'react'
+const basicForm=()=>{
+	const[email, setEmail]=usestate("");
+	const[password,setPassword]=usestate("");
+	const[newEntry, setEntry]=useState([]);
+	const submitform=()=>{
+		const newentry={email: email, password:password};
+		setallEntry([newEntry]);
+	}
+	return(
+	<>
+	<form action="" onSubmit={submitForm}>
+	<div>
+	<label htmlFor="email">Email</label>
+	<input type="text" name="email" id="email"/>
+	value={email}
+	onchange={(e)=>setemail(e.target.value)}
+	</div>
+
+	<div>
+	<label htmlFor="password">Password</label>
+	<input type="text" name="password" id="password"/>
+	value={password}
+	onChange={(e)=>setEmail(e.target.value)}
+	</div>
+
+	<button type="submit">Login</button>
+
+	</form>
+	</>
+	)
+}
+expoprt default Basicform
